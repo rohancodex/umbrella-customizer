@@ -10,8 +10,6 @@ const UmbrellaMenu = (props) => {
     if (e.target.files[0].size > 5242880) {
       alert("Upload a file smaller than 5MB");
     } else {
-      //setloading to true
-      props.setLoading(true);
       const file = e.target.files[0];
 
       // get filename and update button text
@@ -23,8 +21,8 @@ const UmbrellaMenu = (props) => {
       reader.addEventListener("load", (event) => {
         document.getElementById("logo-preview").src = event.target.result;
       });
+
       reader.readAsDataURL(file);
-      props.setLoading(false);
       props.setLogo(true);
     }
   };
