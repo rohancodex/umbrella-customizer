@@ -19,8 +19,8 @@ const UmbrellaPreview = (props) => {
           alt="logo-preview"
           style={{
             position: "absolute",
-            top: "300px",
-            height: "auto",
+            top: "280px",
+            height: "80px",
             maxWidth: "120px",
             objectFit: "contain",
           }}
