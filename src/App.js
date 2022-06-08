@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles/App.css";
+import { useState } from "react";
 
+import UmbrellaMenu from "./components/UmbrellaMenu";
+import UmbrellaPreview from "./components/UmbrellaPreview";
+import blue from "./assets/img/Blue umbrella.png";
+import yellow from "./assets/img/Yello umbrella.png";
+import pink from "./assets/img/Pink umbrella.png";
 function App() {
+  const [isLoading, setLoading] = useState(false);
+  const [preview, setPreview] = useState(blue);
+  const [isLogoUploaded, setLogo] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <UmbrellaPreview
+        img={preview}
+        loading={isLoading}
+        isLogoUploaded={isLogoUploaded}
+      />
+      <UmbrellaMenu
+        loading={isLoading}
+        setLoading={setLoading}
+        setPreview={setPreview}
+        preview={preview}
+        blue={blue}
+        pink={pink}
+        yellow={yellow}
+        setLogo={setLogo}
+      />
     </div>
   );
 }

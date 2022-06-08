@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap");
+
+:root {
+  --blue: #23afe2;
+  --yellow: #f8ce45;
+  --pink: #d10d74;
+  --light-blue: #e8f9fd;
+  --light-pink: #ffe6e6;
+  --light-yellow: #fdf9c6;
+  font-family: "Rubik", sans-serif;
+}
+body {
+  background-color: var(--light-blue);
+}
+.app {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10rem;
+  margin: 200px;
+}
+.umbrella-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.umbrella-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.umbrella-menu-title {
+  font-size: 3rem;
+}
+.variant-btn {
+  all: unset;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  outline: 0px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 3px;
+}
+.blue-btn {
+  border: 2px solid lightblue;
+}
+.blue-btn:focus {
+  border: 5px solid lightblue;
+  height: 20px;
+  width: 20px;
+}
+.pink-btn {
+  border: 2px solid lightpink;
+}
+.pink-btn:focus {
+  border: 5px solid lightpink;
+  height: 20px;
+  width: 20px;
+}
+.yellow-btn {
+  border: 2px solid var(--light-yellow);
+}
+.yellow-btn:focus {
+  border: 5px solid var(--light-yellow);
+  height: 20px;
+  width: 20px;
+}
+.variant-btn-wrapper {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+label {
+  cursor: pointer;
+  width: 400px;
+  margin-top: 1.5rem;
+}
+#upload-btn {
+  background-color: var(--blue);
+  width: 400px;
+  padding: 0.25rem;
+  display: flex;
+  justify-content: space-around;
+}
+.upload-btn-text {
+  font-size: 1.5rem;
+  color: white;
+}
+h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+h1 {
+  font-size: 3rem;
+}
