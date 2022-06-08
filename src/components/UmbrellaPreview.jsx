@@ -1,11 +1,9 @@
-import { useState } from "react";
-import loader from "../assets/img/loader_icon.svg";
 const logo = "";
 
 const UmbrellaPreview = (props) => {
   return (
+    // Preview image starts
     <section className="umbrella-img" style={{ position: "relative" }}>
-      (
       <img
         id="preview-img"
         src={props.img}
@@ -13,7 +11,7 @@ const UmbrellaPreview = (props) => {
         height="400px"
         style={{ position: "relative" }}
       />
-      )
+      {/* uploaded logo  */}
       {props.isLogoUploaded && (
         <img
           id="logo-preview"
@@ -29,6 +27,7 @@ const UmbrellaPreview = (props) => {
         />
       )}
     </section>
+    //preview image ends
   );
 };
 

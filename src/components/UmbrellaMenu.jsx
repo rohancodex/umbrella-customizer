@@ -32,6 +32,7 @@ const UmbrellaMenu = (props) => {
   return (
     <section className="umbrella-menu">
       <h1 className="umbrella-menu-title">Custom Umbrella</h1>
+      {/* variant toggler starts */}
       <div className="variant-btn-wrapper">
         <VariantButton
           bgcolor="#23afe2"
@@ -61,6 +62,7 @@ const UmbrellaMenu = (props) => {
           setLogo={props.setLogo}
         />
       </div>
+      {/* variant toggler starts */}
 
       <h2 style={{ marginBottom: "2px", marginTop: "30px" }}>
         Customize your Umbrella
@@ -70,6 +72,7 @@ const UmbrellaMenu = (props) => {
         <br /> .png and .jpg files only. Max file size is 5MB.
       </p>
 
+      {/* Upload button starts */}
       <label htmlFor="logo">
         <div id="upload-btn">
           <img
@@ -89,6 +92,7 @@ const UmbrellaMenu = (props) => {
           />
         </div>
       </label>
+      {/* Upload button ends */}
     </section>
   );
 };
